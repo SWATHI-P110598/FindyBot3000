@@ -19,10 +19,10 @@ namespace FindyBot3000.AzureFunction
             {
                 this.TopItems[row, col] = true;
             }
-            /*else if (row < 14)
+            else if (row < 14)
             {
                 this.BottomItems[row - 8, col] = true;
-            }*/
+            }
         }
 
         public (int, int) GetNextAvailableBox(bool isSmallBox)
@@ -31,7 +31,7 @@ namespace FindyBot3000.AzureFunction
             {
                 return this.GetBoxAndUpdate(TopItems, TopRows, TopCols);
             }
-            /*else
+            else
             {
                 (int row, int col) = this.GetBoxAndUpdate(BottomItems, BottomRows, BottomCols);
 
@@ -40,7 +40,7 @@ namespace FindyBot3000.AzureFunction
                 row += 8;
 
                 return (row, col);
-            }*/
+            }
         }
 
         private (int, int) GetBoxAndUpdate(bool[,] matrix, int rows, int cols)
